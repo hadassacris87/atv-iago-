@@ -2,7 +2,7 @@
 
 //Questão 1
 
-int main() {
+    int main() {
     int x, y;
 
     printf("Insira o Numero 1: \n");
@@ -14,15 +14,16 @@ int main() {
     printf("Soma: %d\n", x + y);
 
     return 0;
-}
+    }
 
 
 //questão 2
-#include <stdio.h>
 
-int main() {
+     #include <stdio.h>
+     int main() {
+    
     int numero;
-
+    
     printf("Insira um número: ");
     scanf("%d", &numero);
 
@@ -37,11 +38,13 @@ int main() {
 
 //Questão 4
 
-#include <stdio.h>
+     #include <stdio.h>
 
-int main() {
+    int main() {
+           
     int a, b, c, d, e, f;
-    float media;
+
+     float media;
 
     printf("Digite 6 números:\n");
     scanf("%d %d %d %d %d %d", &a, &b, &c, &d, &e, &f);
@@ -55,9 +58,10 @@ int main() {
 
 //Questão 5
 
-#include <stdio.h>
+     #include <stdio.h>
 
-int main() {
+     int main() {
+  
     int ano;
 
     printf("Insira um ano: ");
@@ -74,9 +78,9 @@ int main() {
 
 //Qestão 7
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
+     int main() {
     int num1, num2, num3, maior;
 
     printf("Digite três números:\n");
@@ -93,10 +97,10 @@ int main() {
 
 //Questão 8
 
-#include <stdio.h>
-#include <math.h>
+    #include <stdio.h>
+     #include <math.h>
 
-int main() {
+    int main() {
     double numero, raiz;
 
     printf("Digite um número: ");
@@ -114,9 +118,9 @@ int main() {
 
 //Questão 10
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
+    int main() {
     int a, b, c;
 
     printf("Digite os 3 lados do triângulo:\n");
@@ -139,9 +143,9 @@ int main() {
 
 //Questão 13
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
+    int main() {
     int n, i;
     float nota, peso, somaNotas = 0, somaPesos = 0, media;
 
@@ -171,9 +175,9 @@ int main() {
 
 //Questão 25
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
+     int main() {
     float fahrenheit, celsius;
 
     printf("Digite a temperatura em Fahrenheit: ");
@@ -188,9 +192,9 @@ int main() {
 
 //Questão 27
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
+     int main() {
     float preco, novoPreco;
 
     printf("Digite o preço do produto: R$ ");
@@ -209,9 +213,9 @@ int main() {
 
 //Questao 28
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
+    int main() {
     float total;
     int opcao;
 
@@ -238,9 +242,9 @@ int main() {
 
 //Questão 34
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
+    int main() {
     char nome[50], endereco[50], telefone[20];
     int idade;
 
@@ -266,10 +270,9 @@ int main() {
 
 //QUESTÂO 63
 
+    #include <stdio.h>
 
-#include <stdio.h>
-
-int main() {
+    int main() {
     int matriz[3][3]; 
     int i, j;
 
@@ -293,8 +296,226 @@ int main() {
 }
 
 
+//QUESTÂO 64
+
+     #include <stdio.h>
+
+     int main() {
+    int matriz[3][3];
+    int i, j;
+
+    printf("Digite os valores da matriz 3x3:\n");
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    printf("\nElementos da diagonal principal:\n");
+    for(i = 0; i < 3; i++) {
+        printf("%d ", matriz[i][i]); // só pega onde linha == coluna
+    }
+
+    return 0;
+}
+
+//QUESTÂO 65
+
+    #include <stdio.h>
+
+    int main() {
+    int matriz[2][3];
+    int i, j, soma = 0;
+
+    printf("Digite os valores da matriz 2x3:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+            soma += matriz[i][j]; // já soma direto enquanto lê
+        }
+    }
+
+    printf("\nA soma de todos os elementos da matriz é: %d\n", soma);
+
+    return 0;
+}
+
+//QUESTÂO 66
+
+    #include <stdio.h>
+
+    int main() {
+    int matriz[3][3];
+    int i, j, maior;
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    maior = matriz[0][0];
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            if(matriz[i][j] > maior) {
+                maior = matriz[i][j];
+            }
+        }
+    }
+
+    printf("Maior valor: %d\n", maior);
+
+    return 0;
+    }
+
+//QUESTÂO 67
+
+    #include <stdio.h>
+    int main() {
+    int matriz[3][2];
+    int contador_pares = 0;
+
+    printf("Digite os elementos da matriz 3x2:\n");
+
+    // Loop para ler os elementos da matriz
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+
+            // Verifica se o número é par
+            if (matriz[i][j] % 2 == 0) {
+                contador_pares++;
+            }
+        }
+    }
+
+    printf("\nTotal de numeros pares digitados: %d\n", contador_pares);
+
+    return 0;
+}
+
+//QUESTÂO 68
+
+    #include <stdio.h>
+
+    int main() {
+    int matriz[2][2];
+    int temp;
+
+    printf("Digite os 4 elementos da matriz 2x2:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
 
 
+    for (int j = 0; j < 2; j++) {
+        temp = matriz[0][j];
+        matriz[0][j] = matriz[1][j];
+        matriz[1][j] = temp;
+    }
 
+    printf("\nMatriz com as linhas trocadas:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
 
+    return 0;
+}
+
+//QUESTÂO 69
+
+    #include <stdio.h>
+
+    int main() {
+    int matriz[2][3];
+
+    printf("Digite os 6 elementos da matriz 2x3:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    printf("\nMatriz 2x3:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d\t", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+     }
+
+//QUESTÂO 70
+
+    #include <stdio.h>
+
+    int main() {
+    int matriz[3][3];
+    int soma_linha;
+
+    printf("Digite os 9 elementos da matriz 3x3:\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    printf("\nSoma dos elementos de cada linha:\n");
+    for (int i = 0; i < 3; i++) {
+        soma_linha = 0;
+        for (int j = 0; j < 3; j++) {
+            soma_linha += matriz[i][j];
+        }
+        printf("Soma da linha %d: %d\n", i + 1, soma_linha);
+    }
+
+    return 0;
+}
+
+//QUESTÂO 71
+
+    #include <stdio.h>
+
+    int main() {
+    int matriz[2][3];
+
+    printf("Digite os 6 elementos da matriz 2x3:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    printf("\nMatriz original (2x3):\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nMatriz transposta (3x2):\n");
+    for (int j = 0; j < 3; j++) {
+        for (int i = 0; i < 2; i++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+    }
 
